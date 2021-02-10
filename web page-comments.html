@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--Author:James Ford
+    jamford1@uat.edu
+    wk 2-1 assignment
+-->
+<html>
+<script src="code.js"></script>
+<head>
+    <title>
+        UATSpace Page countdownTimer
+    </title>
+
+</head>
+
+<body>
+    <img src="UATspaceLogo-2-1.jpg">
+    <h1>
+        UATSPACE program
+    </h1>
+    <script>
+        document.write("I am Morphius");
+    </script>
+
+    <p>
+        By choosing a pill button you will change your life forever
+    </p>
+
+
+    <br>
+    <p id="ctdnTimer">Countdown TImer Results</p>
+    </br>
+    <button onclick="countdownTimer();">start</button>
+    <button>stop</button>
+    <br>
+    <p id="RndNum">Countdown TImer Results</p>
+    </br>
+    <p id="die1Res">die1 Results</p>
+    <p id="die2Res">die2 Results</p>
+    <p id="sumRes">sum Results</p>
+    <p id="finalRes">Final Results</p>
+    <button onclick="play()">Play Craps</button>
+    <br>
+    <script>
+        function play2() {
+            //create a die1 variable and assigns 1-6
+            var die1 = Math.ceil(Math.random() * 6);
+
+            var die2 = Math.ceil(Math.random() * 6);
+
+             //creates a varible of the sumation of both die
+            var sum = die1 + die2;
+            //printing out Die 1 results
+            document.getElementById("die1Res").innerhtml = "Die 1 is: " + die1;
+
+            // adds a new line
+            
+            // Printing out die 2 results
+            document.getElementById("die2Res").innerhtml = "Die 2 is: " + die2;
+
+            // adds a new line
+           
+            // Printing out the sumation results
+            document.getElementById("sumRes").innerhtml = "Sum is: " + sum;
+            // adds a new line
+            
+            //sum of dice not equal to 7 or 11
+            if (sum == 7 || sum == 11) {
+                document.getElementById("finalRes").innerhtml = "Craps you lose";
+
+            }
+            //difference of both die are equal to 0  
+            else if (die1 == die2 && die1 % 2 == 0);
+            {
+                document.getElementById("finalRes").innerhtml = "DOUBLES -You win";
+            }
+                // If not try again
+             
+                document.getElementById("finalRes").innerhtml = "push -try again";
+            }
+                
+    </script>
+</body>
+
+</html>
